@@ -66,7 +66,7 @@ public class Transaction{
 		} 
 		else if(accountType.contains("SAVINGS")){
 			float savingsBalance = customer.getSavingsBalance();
-			if ((savingsBalance += transactionValue) > 0){
+			if ((savingsBalance += transactionValue) >= 0){
 				//set ID of savings account for use in autoTransaction
 				customer.setSavingsID(accountID);
 				savingsBalance = customer.getSavingsBalance();
